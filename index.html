@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const domande = [
+    "quale è la capitale della Francia?",
+    "quanto fa 10+67?",
+    "come si chiama la scienza che studia gli animali?",
+    "quale è il capoluogo della calabria?",
+    "come si chiama il monumento rappresentativo di roma?"
+];
+
+const risposteCorrette = [
+    "parigi",
+    "77",
+    "zoologia",
+    "catanzaro",
+    "colosseo"
+];
+
+let punteggio = 0;
+
+function eseguiQuiz() {
+    for (let i = 0; i < domande.length; i++) {
+        let risposta = prompt(domande[i]);
+        if (risposta !== null) {
+            risposta = risposta.toLowerCase();
+            if (risposta === risposteCorrette[i]) {
+                punteggio++;
+            }
+        }
+    }
+    alert("Hai totalizzato " + punteggio + " punti su " + domande.length + "!");
+}
+
+eseguiQuiz();
+
+
+           
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
